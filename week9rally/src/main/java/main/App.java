@@ -52,6 +52,7 @@ public class App
         int i = 1;
         for (Driver driver : cm.getDriverStandings()) {
             System.out.println(i + ". " + driver.getName() + " (" + driver.getCountry() + "): " + driver.getPoints() + " points");
+            i++;
         }
         System.out.println("\nCHAMPIONSHIP LEADER");
         System.out.println(ChampionshipManager.getLeadingDriver().getName() + " with " + cm.getLeadingDriver().getPoints() + " points");
