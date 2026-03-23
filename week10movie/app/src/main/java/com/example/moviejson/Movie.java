@@ -14,8 +14,12 @@ public class Movie {
     }
 
     // Getters
+
     public String getTitle() {
-        return title != null ? title : "Unknown title";
+        if (title == null || title.trim().isEmpty() || title.equalsIgnoreCase("null")) {
+            return "Unknown title";
+        }
+        return title;
     }
 
     public Integer getYear() {
@@ -26,8 +30,12 @@ public class Movie {
         return year != null && year > 0 ? String.valueOf(year) : "Unknown year";
     }
 
+
     public String getGenre() {
-        return genre != null ? genre : "Unknown genre";
+        if (genre == null || genre.trim().isEmpty() || genre.equalsIgnoreCase("null")) {
+            return "Unknown genre";
+        }
+        return genre;
     }
 
     public Integer getPosterResId() {
